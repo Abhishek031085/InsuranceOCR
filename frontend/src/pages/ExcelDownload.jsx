@@ -15,7 +15,7 @@ function ExcelDownload() {
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
   const [loading, setLoading] = useState(false);
-
+   const API_URL = import.meta.env.VITE_API_URL;
   // ==========================================
   // DOWNLOAD EXCEL
   // ==========================================
@@ -31,7 +31,7 @@ function ExcelDownload() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/export-excel",
+        `${API_URL}/export-excel`,
         {
           fromDate,
           toDate
