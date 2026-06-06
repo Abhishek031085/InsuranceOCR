@@ -9,7 +9,7 @@ function PospReportDownload() {
   // NAVIGATION
   // ==========================================
   const navigate = useNavigate();
-
+   const API_URL = import.meta.env.VITE_API_URL;
   // ==========================================
   // STATES
   // ==========================================
@@ -27,7 +27,7 @@ function PospReportDownload() {
   useEffect(() => {
 
     axios
-      .get("http://localhost:5000/agents")
+      .get(`${API_URL}/agents`)
       .then((res) => {
         setAgents(res.data);
       })
@@ -62,7 +62,7 @@ function PospReportDownload() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/export-posp-report",
+        `${API_URL}/export-posp-report`,
         {
           pospId: selectedAgent.value,
           fromDate,
