@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function Dashboard() {
 
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ function Dashboard() {
     try {
       setLoading(true);
 
-      const res = await axios.get("http://localhost:5000/agent-summary");
+      const res = await axios.get(`${API_URL}/agent-summary`);
 
       if (res.data.success) {
         setAgents(res.data.data);
@@ -51,9 +53,9 @@ function Dashboard() {
 
   const openPopup = async (name) => {
     try {
-      const res = await axios.get(
-        `http://localhost:5000/policies-by-source/${name}`
-      );
+     const res = await axios.get(
+  `${API_URL}/policies-by-source/${name}`
+);
 
       if (res.data.success) {
         setPolicyData(res.data.data);
