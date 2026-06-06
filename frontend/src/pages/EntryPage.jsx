@@ -5,6 +5,7 @@ import Select from "react-select";
 
 function EntryPage() {
 
+  const API_URL = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   const rmName = "Abhishek Mondal";
@@ -35,7 +36,7 @@ function EntryPage() {
   const [paymentMode, setPaymentMode] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/agents")
+    axios.get(`${API_URL}/agents`)
       .then(res => setAgents(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -80,7 +81,7 @@ function EntryPage() {
       formData.append("company", company);
       formData.append("pdf", file);
 
-      const res = await axios.post("http://localhost:5000/upload", formData);
+      const res = await axios.post(`${API_URL}/upload`, formData);
 
       // 🔥 THIS WILL APPEAR IN BROWSER CONSOLE
       console.log("BROWSER DEBUG RESPONSE:", res.data.debug);
@@ -157,7 +158,7 @@ function EntryPage() {
         creation_date: new Date().toISOString().split("T")[0]
       };
 
-      const res = await axios.post("http://localhost:5000/save-policy", payload);
+      const res = await axios.post(`${API_URL}/save-policy`, payload);
 
       if (res.data.success) {
 
