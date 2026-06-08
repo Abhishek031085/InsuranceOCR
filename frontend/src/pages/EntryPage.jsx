@@ -260,6 +260,7 @@ function EntryPage() {
                     <option>DIGIT</option>
                     <option>KOTAK</option>
                     <option>SHRIRAM</option>
+                    <option>UNIVERSAL SOMPO</option>
                   </select>
                 </div>
 
