@@ -251,26 +251,26 @@ function EntryPage() {
                   <select className="form-select" value={company} onChange={(e) => setCompany(e.target.value)}>
                     <option value="">Select Company</option>
                     <option>BAJAJ</option>
-<option>CHOLA</option>
-<option>DIGIT</option>
-<option>FUTURE GENERALI</option>
-<option>HDFC</option>
-<option>ICICI</option>
-<option>IFFCO</option>
-<option>KOTAK</option>
-<option>MAGMA</option>
-<option>NATIONAL</option>
-<option>NEW INDIA</option>
-<option>ORIENTAL</option>
-<option>RAHEJA</option>
-<option>RELIANCE</option>
-<option>ROYAL SUNDARAM</option>
-<option>SBI</option>
-<option>SHRIRAM</option>
-<option>TATA</option>
-<option>UNIVERSAL SOMPO</option>
-<option>UNITED</option>
-<option>ZUNO</option>
+                    <option>CHOLA</option>
+                    <option>DIGIT</option>
+                    <option>FUTURE GENERALI</option>
+                    <option>HDFC</option>
+                    <option>ICICI</option>
+                    <option>IFFCO</option>
+                    <option>KOTAK</option>
+                    <option>MAGMA</option>
+                    <option>NATIONAL</option>
+                    <option>NEW INDIA</option>
+                    <option>ORIENTAL</option>
+                    <option>RAHEJA</option>
+                    <option>RELIANCE</option>
+                    <option>ROYAL SUNDARAM</option>
+                    <option>SBI</option>
+                    <option>SHRIRAM</option>
+                    <option>TATA</option>
+                    <option>UNIVERSAL SOMPO</option>
+                    <option>UNITED</option>
+                    <option>ZUNO</option>
                   </select>
                 </div>
 
