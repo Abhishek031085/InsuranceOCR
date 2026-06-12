@@ -258,6 +258,7 @@ function EntryPage() {
                     <option>ICICI</option>
                     <option>IFFCO</option>
                     <option>KOTAK</option>
+                    <option>LIBERTY</option>
                     <option>MAGMA</option>
                     <option>NATIONAL</option>
                     <option>NEW INDIA</option>
